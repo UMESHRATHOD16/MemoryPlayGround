@@ -53,6 +53,11 @@ void nullPointerDemo() {
     cout << "p address: " << p << endl;
     cout << "Trying to access null pointer..." << endl;
 
+    if (p == nullptr) {
+        cout << "Null pointer detected. Skipping access." << endl;
+        return;
+    }
+    
     cout << *p << endl;  // guaranteed crash
 }
 
