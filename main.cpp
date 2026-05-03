@@ -47,6 +47,15 @@ void memoryReuseDemo() {
     cout << "Accessing p again: " << *p << endl;  // undefined behaviour
 }
 
+void nullPointerDemo() {
+    int* p = nullptr;
+
+    cout << "p address: " << p << endl;
+    cout << "Trying to access null pointer..." << endl;
+
+    cout << *p << endl;  // guaranteed crash
+}
+
 int main() {
     int choice;
 
@@ -58,6 +67,7 @@ int main() {
         if (choice == 1) stackVsHeap();
         if (choice == 2) danglingPointerDemo();
         if (choice == 3) memoryReuseDemo();
+        if (choice == 4) nullPointerDemo();
 
     }
 }
