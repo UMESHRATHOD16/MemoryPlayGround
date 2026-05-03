@@ -24,10 +24,10 @@ This project focuses on exposing those hidden behaviors through simple, controll
 - Allocated memory can be reused immediately
 - OS enforces memory protection (segmentation faults)
 
+> Built as part of learning low-level systems and memory management in C++
+
 ## How to Run
 
 ```bash
 g++ main.cpp
 ./a.out
-
-> Built as part of learning low-level systems and memory management in C++
