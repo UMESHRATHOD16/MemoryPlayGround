@@ -4,12 +4,16 @@ using namespace std;
 int globalVar = 100 ;
 
 void showMenu() {
-    cout << "\n--- Memory Playground ---\n";
+    cout << "\n=============================\n";
+    cout << "     Memory Playground\n";
+    cout << "=============================\n";
     cout << "1. Stack vs Heap\n";
     cout << "2. Dangling Pointer\n";
     cout << "3. Memory Reuse\n";
-    cout << "4. Null Pointer Crash\n";
+    cout << "4. Null Pointer Demo\n";
     cout << "0. Exit\n";
+    cout << "=============================\n";
+    cout << "Enter choice: ";
 }
 
 void stackVsHeap() {
@@ -57,7 +61,7 @@ void nullPointerDemo() {
         cout << "Null pointer detected. Skipping access." << endl;
         return;
     }
-    
+
     cout << *p << endl;  // guaranteed crash
 }
 
