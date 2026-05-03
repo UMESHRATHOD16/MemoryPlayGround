@@ -30,6 +30,8 @@ void danglingPointerDemo() {
 
     delete p;
 
+   p = nullptr;  // reset pointer to avoid dangling pointer access (prevents use-after-free bugs)
+
     cout << "After delete (dangling): " << *p << endl;  // accessing the data which is freed shows undefined behaviour
 }
 
