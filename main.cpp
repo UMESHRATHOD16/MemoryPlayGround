@@ -35,6 +35,18 @@ void danglingPointerDemo() {
     cout << "After delete (dangling): " << *p << endl;  // accessing the data which is freed shows undefined behaviour
 }
 
+void memoryReuseDemo() {
+    int* p = new int(20);
+    cout << "p address: " << p << " value: " << *p << endl;
+
+    delete p;
+
+    int* q = new int(99);
+    cout << "q address: " << q << " value: " << *q << endl;
+
+    cout << "Accessing p again: " << *p << endl;  // undefined behaviour
+}
+
 int main() {
     int choice;
 
@@ -45,6 +57,7 @@ int main() {
         if (choice == 0) break;
         if (choice == 1) stackVsHeap();
         if (choice == 2) danglingPointerDemo();
+        if (choice == 3) memoryReuseDemo();
 
     }
 }
