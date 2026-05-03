@@ -20,9 +20,10 @@ void stackVsHeap() {
     int x = 10;
     int* p = new int(20);
 
-    cout << "Global: " << &globalVar << endl;
-    cout << "Stack: " << &x << endl;
-    cout << "Heap: " << p << endl;
+    cout << "\n[Stack vs Heap Demo]\n";
+    cout << "Global variable address : " << &globalVar << endl;
+    cout << "Stack variable address  : " << &x << endl;
+    cout << "Heap variable address   : " << p << endl;
 
     delete p;
 }
